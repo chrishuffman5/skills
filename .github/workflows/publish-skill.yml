@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -48,17 +48,17 @@ jobs:
             # Check if the branch already exists on remote
             if git ls-remote --exit-code --heads origin "$skill_name" >/dev/null 2>&1; then
               echo "Branch '$skill_name' exists, updating..."
-              git checkout "$skill_name"
+              git checkout -B "$skill_name" "origin/$skill_name" --
               # Remove existing files (except .git)
               git rm -rf . 2>/dev/null || true
             else
               echo "Branch '$skill_name' does not exist, creating..."
-              git checkout --orphan "$skill_name"
+              git checkout --orphan "$skill_name" --
               git rm -rf . 2>/dev/null || true
             fi
 
             # Copy skill folder contents to branch root
-            git checkout main -- "$skill_name/"
+            git restore --source=main -- "$skill_name/"
             # Move contents from subfolder to root
             shopt -s dotglob
             mv "$skill_name"/* . 2>/dev/null || true
@@ -76,5 +76,5 @@ jobs:
             fi
 
             # Return to main for next iteration
-            git checkout main
+            git checkout main --
           done
