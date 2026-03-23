@@ -1,0 +1,80 @@
+name: Publish Skill Branches
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect and publish skill folders
+        run: |
+          set -euo pipefail
+
+          # Reserved root entries that are NOT skill folders
+          RESERVED=".git .github .gitignore CLAUDE.md LICENSE README.md"
+
+          is_reserved() {
+            local name="$1"
+            for r in $RESERVED; do
+              [ "$name" = "$r" ] && return 0
+            done
+            return 1
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Find all top-level directories that are not reserved
+          for dir in */; do
+            skill_name="${dir%/}"
+
+            if is_reserved "$skill_name"; then
+              echo "Skipping reserved entry: $skill_name"
+              continue
+            fi
+
+            echo "=== Processing skill: $skill_name ==="
+
+            # Check if the branch already exists on remote
+            if git ls-remote --exit-code --heads origin "$skill_name" >/dev/null 2>&1; then
+              echo "Branch '$skill_name' exists, updating..."
+              git checkout "$skill_name"
+              # Remove existing files (except .git)
+              git rm -rf . 2>/dev/null || true
+            else
+              echo "Branch '$skill_name' does not exist, creating..."
+              git checkout --orphan "$skill_name"
+              git rm -rf . 2>/dev/null || true
+            fi
+
+            # Copy skill folder contents to branch root
+            git checkout main -- "$skill_name/"
+            # Move contents from subfolder to root
+            shopt -s dotglob
+            mv "$skill_name"/* . 2>/dev/null || true
+            shopt -u dotglob
+            rmdir "$skill_name" 2>/dev/null || true
+
+            # Commit and push
+            git add -A
+            if git diff --cached --quiet; then
+              echo "No changes for $skill_name, skipping."
+            else
+              git commit -m "Update $skill_name skill"
+              git push -u origin "$skill_name"
+              echo "Published branch: $skill_name"
+            fi
+
+            # Return to main for next iteration
+            git checkout main
+          done
