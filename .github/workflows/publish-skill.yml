@@ -19,7 +19,7 @@ jobs:
       - name: Find skill folders
         id: find
         run: |
-          RESERVED=".git .github .gitignore CLAUDE.md LICENSE README.md"
+          RESERVED=".git .github .claude CLAUDE.md LICENSE README.md"
 
           is_reserved() {
             local name="$1"

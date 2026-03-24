@@ -11,8 +11,8 @@ This repo manages multiple skills (for Claude Code, GitHub Copilot, Gemini, etc.
 ```
 main branch:
   CLAUDE.md
-  .gitignore
   LICENSE
+  .claude/              ← Claude Code skills for working in this repo
   .github/workflows/    ← CI/CD that creates/updates skill branches
   <skill-name>/         ← each skill is a folder in the repo root
     SKILL.md            ← skill definition (required)
@@ -67,5 +67,5 @@ This creates `.claude/skills/skill-creator/` with `SKILL.md` at its root.
 
 These names at the root of `main` are **not** skill folders and are excluded by the pipeline:
 
-- `.git/`, `.github/`, `.gitignore`
+- `.git/`, `.github/`, `.claude/`
 - `CLAUDE.md`, `LICENSE`, `README.md`
