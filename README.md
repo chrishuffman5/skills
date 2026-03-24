@@ -30,5 +30,6 @@ git clone https://github.com/chrishuffman5/skills --branch <skill-name> <skill-n
 | read-memories | `git clone https://github.com/chrishuffman5/skills --branch read-memories read-memories` |
 | skill-creator | `git clone https://github.com/chrishuffman5/skills --branch skill-creator skill-creator` |
 | webapp-testing | `git clone https://github.com/chrishuffman5/skills --branch webapp-testing webapp-testing` |
+| web-artifacts-builder | `git clone https://github.com/chrishuffman5/skills --branch web-artifacts-builder web-artifacts-builder` |
 | whisper | `git clone https://github.com/chrishuffman5/skills --branch whisper whisper` |
 | xlsx | `git clone https://github.com/chrishuffman5/skills --branch xlsx xlsx` |
