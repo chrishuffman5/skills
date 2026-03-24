@@ -14,17 +14,21 @@ git clone https://github.com/chrishuffman5/skills --branch <skill-name> <skill-n
 
 | Skill | Install Command |
 |-------|----------------|
+| algorithmic-art | `git clone https://github.com/chrishuffman5/skills --branch algorithmic-art algorithmic-art` |
 | attach-db | `git clone https://github.com/chrishuffman5/skills --branch attach-db attach-db` |
 | aws-cli | `git clone https://github.com/chrishuffman5/skills --branch aws-cli aws-cli` |
 | docx | `git clone https://github.com/chrishuffman5/skills --branch docx docx` |
 | duckdb-docs | `git clone https://github.com/chrishuffman5/skills --branch duckdb-docs duckdb-docs` |
+| frontend-design | `git clone https://github.com/chrishuffman5/skills --branch frontend-design frontend-design` |
 | gitit | `git clone https://github.com/chrishuffman5/skills --branch gitit gitit` |
 | install-duckdb | `git clone https://github.com/chrishuffman5/skills --branch install-duckdb install-duckdb` |
+| mcp-builder | `git clone https://github.com/chrishuffman5/skills --branch mcp-builder mcp-builder` |
 | pdf | `git clone https://github.com/chrishuffman5/skills --branch pdf pdf` |
 | pptx | `git clone https://github.com/chrishuffman5/skills --branch pptx pptx` |
 | query | `git clone https://github.com/chrishuffman5/skills --branch query query` |
 | read-file | `git clone https://github.com/chrishuffman5/skills --branch read-file read-file` |
 | read-memories | `git clone https://github.com/chrishuffman5/skills --branch read-memories read-memories` |
 | skill-creator | `git clone https://github.com/chrishuffman5/skills --branch skill-creator skill-creator` |
+| webapp-testing | `git clone https://github.com/chrishuffman5/skills --branch webapp-testing webapp-testing` |
 | whisper | `git clone https://github.com/chrishuffman5/skills --branch whisper whisper` |
 | xlsx | `git clone https://github.com/chrishuffman5/skills --branch xlsx xlsx` |
