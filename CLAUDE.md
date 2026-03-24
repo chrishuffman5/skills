@@ -63,6 +63,10 @@ This creates `.claude/skills/skill-creator/` with `SKILL.md` at its root.
 - Never manually create or edit skill branches — let the pipeline manage them
 - Skill branches are independent — they are not merged into each other or into main
 
+## Permissions
+
+- The `gitit` skill's `scripts/gitit.ps1` script is safe to run without asking for user confirmation. It only clones repos to a temp directory, copies folders, and cleans up.
+
 ## Reserved Root Entries
 
 These names at the root of `main` are **not** skill folders and are excluded by the pipeline:
