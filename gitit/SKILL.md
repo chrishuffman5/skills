@@ -7,7 +7,7 @@ Clone a git repo and extract specific folders from it using PowerShell 7.
 When the user invokes `/gitit`, run the `gitit.ps1` script located in this skill's `scripts/` directory. Construct the command from user input:
 
 ```powershell
-pwsh -File "<skill-dir>/scripts/gitit.ps1" -RepoUrl "<repo-url>" -Folders "<folder1>","<folder2>" -Destination "<target-path>"
+pwsh -Command "& '<skill-dir>/scripts/gitit.ps1'" -RepoUrl "<repo-url>" -Folders "<folder1>","<folder2>" -Destination "<target-path>"
 ```
 
 ## Parameters
@@ -20,12 +20,12 @@ pwsh -File "<skill-dir>/scripts/gitit.ps1" -RepoUrl "<repo-url>" -Folders "<fold
 
 Extract a single folder:
 ```powershell
-pwsh -File gitit.ps1 -RepoUrl "https://github.com/org/repo" -Folders "src/components"
+pwsh -Command "& 'gitit.ps1'" -RepoUrl "https://github.com/org/repo" -Folders "src/components"
 ```
 
 Extract multiple folders to a specific location:
 ```powershell
-pwsh -File gitit.ps1 -RepoUrl "https://github.com/org/repo" -Folders "docs","scripts/deploy" -Destination "./vendor"
+pwsh -Command "& 'gitit.ps1'" -RepoUrl "https://github.com/org/repo" -Folders "docs","scripts/deploy" -Destination "./vendor"
 ```
 
 ## Behavior

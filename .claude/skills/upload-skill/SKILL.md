@@ -14,16 +14,22 @@ When the user invokes `/upload-skill`:
 
 3. **Log which skill folder(s) will be uploaded** (for the user's awareness, not as a confirmation prompt).
 
-4. **Stage only the skill folder(s)** — use `git add <folder-name>/` for each detected skill folder. Do not use `git add -A` or `git add .`.
+4. **Update `README.md`** — Regenerate the skills table in `README.md` at the repo root so it lists every skill folder currently in the repo (sorted alphabetically). Each row should have the skill name and its install command. Use the existing README.md format:
+   ```
+   | skill-name | `git clone https://github.com/chrishuffman5/skills --branch skill-name skill-name` |
+   ```
+   Keep the file header and installation instructions intact — only regenerate the table rows.
 
-5. **Commit** with the message format:
+5. **Stage the skill folder(s) and README.md** — use `git add <folder-name>/ README.md` for each detected skill folder. Do not use `git add -A` or `git add .`.
+
+6. **Commit** with the message format:
    - Single skill: `Add <skill-name> skill`
    - Updated skill: `Update <skill-name> skill`
    - Multiple skills: `Add <skill-name-1>, <skill-name-2> skills`
 
-6. **Push to remote main**: `git push origin main`
+7. **Push to remote main**: `git push origin main`
 
-7. **Confirm to the user** that the push succeeded and that the GitHub Actions pipeline will automatically create/update the corresponding skill branch(es). Remind them they can install the skill with:
+8. **Confirm to the user** that the push succeeded and that the GitHub Actions pipeline will automatically create/update the corresponding skill branch(es). Remind them they can install the skill with:
    ```
    git clone https://github.com/chrishuffman5/skills --branch <skill-name> <skill-name>
    ```
