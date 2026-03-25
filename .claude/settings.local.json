@@ -4,7 +4,12 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(gh run:*)"
+      "Bash(gh run:*)",
+      "Bash(pwsh -Command \"& 'C:/Users/chris/Github/skills/.claude/skills/gitit/scripts/gitit.ps1' -RepoUrl 'https://github.com/*' -Folders *\")",
+      "Bash(ls -d /c/Users/chris/Github/skills/*/)",
+      "Bash(xargs -I{} basename {})",
+      "Bash(pwsh -Command \"& 'C:/Users/chris/Github/skills/.claude/skills/gitit/scripts/gitit.ps1' -RepoUrl 'https://github.com/anthropics/skills' -Folders 'skills/web-artificates-builder'\")",
+      "Bash(pwsh -Command \"git clone --depth 1 ''''https://github.com/anthropics/skills'''' ''''$env:TEMP/skills-check''''; Get-ChildItem ''''$env:TEMP/skills-check/skills'''' -Directory | Select-Object -ExpandProperty Name | Sort-Object; Remove-Item ''''$env:TEMP/skills-check'''' -Recurse -Force\")"
     ]
   }
 }

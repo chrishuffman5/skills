@@ -1,3 +1,8 @@
+---
+name: upload-skill
+description: Upload new or updated skill folders to the remote main branch, triggering the CI/CD pipeline to publish them as dedicated skill branches. Use this skill whenever the user wants to commit and push new or modified skills to the repository.
+---
+
 # upload-skill
 
 Upload new or updated skill folders to the remote main branch, triggering the CI/CD pipeline to publish them as dedicated skill branches.
