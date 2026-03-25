@@ -15,6 +15,7 @@ git clone https://github.com/chrishuffman5/skills --branch <skill-name> <skill-n
 | Skill | Install Command |
 |-------|----------------|
 | algorithmic-art | `git clone https://github.com/chrishuffman5/skills --branch algorithmic-art algorithmic-art` |
+| autoresearch | `git clone https://github.com/chrishuffman5/skills --branch autoresearch autoresearch` |
 | attach-db | `git clone https://github.com/chrishuffman5/skills --branch attach-db attach-db` |
 | aws-cli | `git clone https://github.com/chrishuffman5/skills --branch aws-cli aws-cli` |
 | docx | `git clone https://github.com/chrishuffman5/skills --branch docx docx` |
