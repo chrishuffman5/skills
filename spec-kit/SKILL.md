@@ -1,6 +1,9 @@
-# Spec-Driven Development
+---
+name: spec-kit
+description: Implement spec-driven development (SDD) for any software project. Use this skill whenever the user wants to plan, specify, or systematically build a feature using structured specifications, or when they mention "spec-driven", "spec-kit", "constitution", "feature spec", or want to go from idea to implementation with a structured planning process. Also trigger when the user asks to "specify a feature", "create a plan", "break into tasks", or "analyze consistency" across project artifacts.
+---
 
-Implement spec-driven development (SDD) for any software project. Use this skill whenever the user wants to plan, specify, or systematically build a feature using structured specifications, or when they mention "spec-driven", "spec-kit", "constitution", "feature spec", or want to go from idea to implementation with a structured planning process. Also trigger when the user asks to "specify a feature", "create a plan", "break into tasks", or "analyze consistency" across project artifacts.
+# Spec-Driven Development
 
 ## Overview
 

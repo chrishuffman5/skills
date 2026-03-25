@@ -1,3 +1,8 @@
+---
+name: gitit
+description: Clone a git repo and extract specific folders from it using PowerShell 7. Use this skill whenever the user wants to pull specific folders from a GitHub repository, extract parts of a repo, or copy subdirectories from a remote repo into their project.
+---
+
 # gitit
 
 Clone a git repo and extract specific folders from it using PowerShell 7.
