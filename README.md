@@ -25,6 +25,7 @@ git clone https://github.com/chrishuffman5/skills --branch <skill-name> <skill-n
 | frontend-design | `git clone https://github.com/chrishuffman5/skills --branch frontend-design frontend-design` |
 | gitit | `git clone https://github.com/chrishuffman5/skills --branch gitit gitit` |
 | install-duckdb | `git clone https://github.com/chrishuffman5/skills --branch install-duckdb install-duckdb` |
+| install-skill | `git clone https://github.com/chrishuffman5/skills --branch install-skill install-skill` |
 | mcp-builder | `git clone https://github.com/chrishuffman5/skills --branch mcp-builder mcp-builder` |
 | pdf | `git clone https://github.com/chrishuffman5/skills --branch pdf pdf` |
 | pptx | `git clone https://github.com/chrishuffman5/skills --branch pptx pptx` |
